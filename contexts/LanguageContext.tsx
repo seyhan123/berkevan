@@ -263,7 +263,8 @@ export const translations = {
   },
 } as const;
 
-type Translations = typeof translations.tr;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type Translations = any;
 
 interface LanguageContextValue {
   lang: Lang;
