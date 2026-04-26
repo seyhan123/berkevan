@@ -261,7 +261,7 @@ export const translations = {
       recentPeople: "Yên Dawî Hatine Zêdekirin",
     },
   },
-} as const;
+};
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Translations = any;
