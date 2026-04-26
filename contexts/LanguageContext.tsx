@@ -263,10 +263,12 @@ export const translations = {
   },
 } as const;
 
+type Translations = typeof translations.tr;
+
 interface LanguageContextValue {
   lang: Lang;
   setLang: (l: Lang) => void;
-  t: typeof translations.tr;
+  t: Translations;
 }
 
 const LanguageContext = createContext<LanguageContextValue>({
