@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background: #f7f4ef;
+    color: #1a1a1a;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .card { @apply bg-white rounded-2xl border border-stone-200/80 shadow-sm; }
+  .card-hover {
+    @apply bg-white rounded-2xl border border-stone-200/80 shadow-sm transition-all duration-200
+           hover:shadow-md hover:border-[#2d5a3d]/30 hover:-translate-y-0.5 cursor-pointer;
+  }
+  .btn-primary {
+    @apply bg-[#2d5a3d] text-white px-5 py-2.5 rounded-xl text-sm font-medium
+           hover:bg-[#234830] transition-colors disabled:opacity-40;
+  }
+  .btn-secondary {
+    @apply bg-white border border-stone-200 text-stone-700 px-4 py-2 rounded-xl text-sm
+           hover:border-[#2d5a3d]/40 hover:text-[#2d5a3d] transition-all;
+  }
+  .btn-ghost {
+    @apply text-stone-500 px-3 py-1.5 rounded-lg text-sm hover:bg-stone-100 hover:text-stone-800 transition-colors;
+  }
+  .btn-danger {
+    @apply text-red-500 border border-red-200 px-3 py-1.5 rounded-lg text-xs hover:bg-red-50 transition-colors;
+  }
+  .input {
+    @apply w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-sm
+           focus:outline-none focus:ring-2 focus:ring-[#2d5a3d]/20 focus:border-[#2d5a3d]/50
+           placeholder:text-stone-400 transition-all;
+  }
+  .label { @apply block text-xs font-semibold text-stone-500 mb-1.5 uppercase tracking-wider; }
+  .page-title {
+    @apply text-3xl font-bold text-stone-900 mb-2;
+    font-family: 'Libre Baskerville', serif;
+  }
+  .page-subtitle { @apply text-sm text-stone-500 mb-8; }
+  .section-title {
+    @apply text-xl font-bold text-stone-900 mb-4;
+    font-family: 'Libre Baskerville', serif;
+  }
+  .badge { @apply text-xs px-2.5 py-0.5 rounded-full font-medium; }
+  .badge-m    { @apply bg-blue-50 text-blue-700; }
+  .badge-f    { @apply bg-rose-50 text-rose-600; }
+  .badge-nick { @apply bg-amber-50 text-amber-700 italic; }
+  .badge-dead { @apply bg-stone-100 text-stone-500; }
+  .badge-gen  { @apply bg-[#2d5a3d]/10 text-[#2d5a3d] border border-[#2d5a3d]/20; }
+  .info-row   { @apply flex gap-4 py-3.5 border-b border-stone-100 last:border-0 text-sm; }
+  .info-label { @apply text-stone-400 w-36 flex-shrink-0 text-xs uppercase tracking-wider font-semibold pt-0.5; }
+  .info-value { @apply text-stone-800 flex-1; }
+  .filter-btn {
+    @apply text-xs px-3.5 py-1.5 rounded-full border border-stone-200 text-stone-500
+           hover:border-[#2d5a3d]/40 hover:text-[#2d5a3d] transition-all;
+  }
+  .filter-btn-active {
+    @apply text-xs px-3.5 py-1.5 rounded-full bg-[#2d5a3d] text-white border border-[#2d5a3d];
+  }
+  .stat-card { @apply bg-white rounded-2xl border border-stone-200/80 shadow-sm p-5; }
+  .admin-sidebar-link {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-stone-500
+           hover:bg-stone-50 hover:text-stone-800 transition-colors;
+  }
+  .admin-sidebar-link-active {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold
+           bg-[#2d5a3d] text-white;
+  }
+  .panel-label { @apply text-xs font-semibold uppercase tracking-wider text-stone-400 mb-4 flex justify-between items-center; }
+  .hero-banner {
+    @apply bg-[#2d5a3d] text-white rounded-2xl p-8 mb-8;
+  }
+  .tag-pill {
+    @apply text-xs border rounded-full px-3 py-1;
+  }
+}
